@@ -1,0 +1,10 @@
+# Reglas del escaneo OWASP ZAP baseline.
+# Formato: <ID de la alerta>\t<acción>\t<comentario opcional>
+# Acciones posibles: IGNORE (ignorar), WARN (advertir), FAIL (fallar).
+#
+# Por defecto ZAP trata la mayoría de las alertas como WARN. Acá se puede
+# silenciar ruido o subir de nivel una alerta concreta. Se deja como ejemplo,
+# sin reglas activas: todas las alertas se reportan como advertencia.
+#
+# Ejemplo (comentado):
+# 10015	IGNORE	(Incomplete or No Cache-control Header)

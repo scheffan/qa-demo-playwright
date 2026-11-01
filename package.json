@@ -1,0 +1,18 @@
+{
+  "name": "qa-saucedemo-playwright",
+  "version": "1.0.0",
+  "description": "Suite de pruebas E2E y de seguridad con Playwright sobre Sauce Demo y OWASP Juice Shop",
+  "private": true,
+  "scripts": {
+    "test": "playwright test --project=e2e",
+    "test:e2e": "playwright test --project=e2e",
+    "test:seguridad": "playwright test --project=seguridad",
+    "report": "playwright show-report",
+    "juice": "docker run --rm -p 3000:3000 bkimminich/juice-shop"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
