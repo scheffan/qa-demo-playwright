@@ -26,6 +26,9 @@ export default defineConfig({
     ['html', { open: 'never' }],
   ],
   use: {
+    // Sauce Demo y Juice Shop marcan sus elementos con `data-test`,
+    // así que getByTestId() debe buscar ese atributo (por defecto usa `data-testid`).
+    testIdAttribute: 'data-test',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
