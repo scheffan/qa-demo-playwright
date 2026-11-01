@@ -27,9 +27,9 @@ test.describe('Login', () => {
 
   test('se puede cerrar sesión', async ({ page }) => {
     await iniciarSesion(page, USUARIOS.estandar);
-    // El sitio tiene dos versiones del menú; aceptamos ambos selectores.
-    await page.getByTestId('open-menu').or(page.locator('#react-burger-menu-btn')).click();
-    await page.getByTestId('logout-sidebar-link').or(page.locator('#logout_sidebar_link')).click();
+    // El botón del menú y el link de salir tienen id propio y estable.
+    await page.locator('#react-burger-menu-btn').click();
+    await page.locator('#logout_sidebar_link').click();
     await expect(page.getByTestId('login-button')).toBeVisible();
   });
 });
